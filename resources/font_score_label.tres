@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://dulmu4by6ny4j"]
+
+[ext_resource type="FontFile" uid="uid://cu5f4xg74rk7f" path="res://assets/font_delta_block/DeltaBlock.ttf" id="1_ixrn7"]
+
+[resource]
+base_font = ExtResource("1_ixrn7")
+spacing_glyph = 3

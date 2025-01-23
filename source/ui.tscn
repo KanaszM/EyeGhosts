@@ -1,0 +1,318 @@
+[gd_scene load_steps=10 format=3 uid="uid://dggea2iolinwy"]
+
+[ext_resource type="Script" path="res://source/ui.gd" id="1_dty2u"]
+[ext_resource type="FontVariation" uid="uid://dulmu4by6ny4j" path="res://resources/font_score_label.tres" id="2_gpd34"]
+[ext_resource type="Shader" path="res://resources/ui_pause_screen_blur.gdshader" id="3_m8rm2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mtijw"]
+shader = ExtResource("3_m8rm2")
+shader_parameter/amount = 2.5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0gqdf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lqg6w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pntr"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 15.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.666667)
+skew = Vector2(-0.25, 0)
+border_width_left = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 10
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 10
+corner_detail = 20
+shadow_color = Color(0.867188, 0.867188, 0.867188, 0.14902)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3hc4"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 15.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.666667)
+skew = Vector2(-0.25, 0)
+border_width_left = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 10
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 10
+corner_detail = 20
+shadow_color = Color(0.867188, 0.867188, 0.867188, 0.14902)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5v2h"]
+content_margin_left = 20.0
+content_margin_top = 5.0
+content_margin_right = 15.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.666667)
+skew = Vector2(0.25, 0)
+border_width_left = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 10
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 10
+corner_detail = 20
+shadow_color = Color(0, 0, 0, 0.14902)
+shadow_size = 10
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_dty2u")
+
+[node name="TimerSession" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+one_shot = true
+
+[node name="SessionElements" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelScore" type="Label" parent="SessionElements"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -2.0
+offset_top = 26.0
+offset_right = 248.0
+offset_bottom = 106.0
+rotation = -0.349066
+pivot_offset = Vector2(125, 40)
+theme_override_fonts/font = ExtResource("2_gpd34")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+
+[node name="LabelTimeMinutes" type="Label" parent="SessionElements"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 904.0
+offset_top = 24.0
+offset_right = 1154.0
+offset_bottom = 104.0
+rotation = 0.349066
+pivot_offset = Vector2(125, 40)
+theme_override_fonts/font = ExtResource("2_gpd34")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+
+[node name="LabelTimeSeconds" type="Label" parent="SessionElements"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1014.0
+offset_top = 25.0
+offset_right = 1139.0
+offset_bottom = 105.0
+rotation = 0.349066
+pivot_offset = Vector2(125, 40)
+theme_override_fonts/font = ExtResource("2_gpd34")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+
+[node name="PanelPauseBackground" type="ColorRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_mtijw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginInfo" type="MarginContainer" parent="PanelPauseBackground"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_right = 32
+
+[node name="HBoxInfo" type="HBoxContainer" parent="PanelPauseBackground/MarginInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PanelInstructions" type="PanelContainer" parent="PanelPauseBackground/MarginInfo/HBoxInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MarginInstructions" type="MarginContainer" parent="PanelPauseBackground/MarginInfo/HBoxInfo/PanelInstructions"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="LabelInstructions" type="Label" parent="PanelPauseBackground/MarginInfo/HBoxInfo/PanelInstructions/MarginInstructions"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+size_flags_vertical = 1
+text = "How to play:
+
+Defend the eye's center from approaching ghosts by intercepting them with your mouse cursor.
+
+To block a ghost successfully, your cursor must match its color.
+
+Switch your cursor's color by pressing the left or right mouse buttons.
+
+The game ends when the timer runs out.
+
+You can pause the game anytime by pressing ESC"
+autowrap_mode = 3
+
+[node name="PanelCredits" type="PanelContainer" parent="PanelPauseBackground/MarginInfo/HBoxInfo"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="MarginCredits" type="MarginContainer" parent="PanelPauseBackground/MarginInfo/HBoxInfo/PanelCredits"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="LabelCredits" type="Label" parent="PanelPauseBackground/MarginInfo/HBoxInfo/PanelCredits/MarginCredits"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 300)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Developed in Godot v4.4.dev3.official [f4af8201b]
+
+Ghost sprites by PiXeRaT (https://opengameart.org/users/pixerat)
+
+Delta Block font by GGBotNet (https://www.ggbot.net/fonts/)
+
+Made by KanaszM - 2024"
+autowrap_mode = 3
+
+[node name="MarginPauseBackground" type="MarginContainer" parent="PanelPauseBackground"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxBackground" type="VBoxContainer" parent="PanelPauseBackground/MarginPauseBackground"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="LabelPauseTitle" type="Label" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_gpd34")
+theme_override_font_sizes/font_size = 60
+text = "GHOSTS OF AN EYE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VboxButtons" type="VBoxContainer" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 32
+
+[node name="PanelHighScore" type="PanelContainer" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground/VboxButtons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0gqdf")
+
+[node name="VBoxHighScore" type="VBoxContainer" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground/VboxButtons/PanelHighScore"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="LabelHighScore" type="Label" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground/VboxButtons/PanelHighScore/VBoxHighScore"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_gpd34")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 1
+
+[node name="ButtonNewGame" type="Button" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground/VboxButtons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lqg6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8pntr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p3hc4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l5v2h")
+text = "New Game"
+
+[node name="ButtonResume" type="Button" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground/VboxButtons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lqg6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8pntr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p3hc4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l5v2h")
+text = "Resume
+"
+
+[node name="ButtonInfo" type="Button" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground/VboxButtons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lqg6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8pntr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p3hc4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l5v2h")
+text = "Info
+"
+
+[node name="ButtonExit" type="Button" parent="PanelPauseBackground/MarginPauseBackground/VBoxBackground/VboxButtons"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lqg6w")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8pntr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p3hc4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_l5v2h")
+text = "Exit"
