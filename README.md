@@ -1,6 +1,6 @@
 # Ghosts of an Eye!
 
-https://github.com/user-attachments/assets/d48f6a4e-1017-408c-8074-c79c9b81e3d9
+https://github.com/user-attachments/assets/fa592783-f976-4e50-ba9b-d01a0e215fd9
 
 ## Description
 
