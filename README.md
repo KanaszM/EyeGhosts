@@ -1,6 +1,6 @@
 # Ghosts of an Eye!
 
-[![Ghosts of an Eye Trailer](https://img.youtube.com/vi/OgA6QckQeFM/0.jpg)](https://www.youtube.com/watch?v=OgA6QckQeFM?autoplay=1)
+https://github.com/user-attachments/assets/fa592783-f976-4e50-ba9b-d01a0e215fd9
 
 ## Description
 
