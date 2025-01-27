@@ -1,9 +1,6 @@
 # Ghosts of an Eye!
 
-<video autoplay muted loop>
-  <source src="https://github.com/user-attachments/assets/fa592783-f976-4e50-ba9b-d01a0e215fd9" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID?autoplay=1)
 
 ## Description
 
