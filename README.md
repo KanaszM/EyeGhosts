@@ -37,4 +37,5 @@ Currently, there are no immediate plans for further development of this project.
 ## Credits
 
 Ghost sprites by PiXeRaT (https://opengameart.org/users/pixerat)
+
 Delta Block font by GGBotNet (https://www.ggbot.net/fonts/)
