@@ -1,5 +1,7 @@
 # Ghosts of an Eye!
 
+https://github.com/user-attachments/assets/d48f6a4e-1017-408c-8074-c79c9b81e3d9
+
 ## Description
 
 To prepare myself for the Global Game Jam 2025🌐(my very first game jam), I set myself a personal challenge: *to create a game in just two days*. This was my way of getting into the right mindset for the event. And this is the result 😁
