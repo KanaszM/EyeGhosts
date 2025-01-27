@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/fa592783-f976-4e50-ba9b-d01a0e215fd9
 
 To prepare myself for the Global Game Jam 2025🌐(my very first game jam), I set myself a personal challenge: *to create a game in just two days*. This was my way of getting into the right mindset for the event. And this is the result 😁
 
-The game was developed using **Godot v4.4.dev3.official**. [[An online web version is available on Itch.io and can be played here]](https://kanaszm.itch.io/ghosts-of-an-eye).
+The game was developed using **Godot v4.4.dev3.official**. [An online web version is available on Itch.io and can be played here](https://kanaszm.itch.io/ghosts-of-an-eye).
 
 > ⚠️ Please note that due to certain limitations, shaders are not
 > functional in the web version. I highly recommend playing the Windows release version available in this repository for the best experience.
